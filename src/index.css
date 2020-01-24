@@ -1,13 +1,85 @@
-body {
+@import '~antd/dist/antd.css';
+
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+}
+:root {
+  --page-backgroud-color: #f1f1f1;
+  --normal-text-color: #212121;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.dark-mode {
+  --page-backgroud-color: rgb(21, 21, 21);
+  --normal-text-color: #fefefe;
+}
+main {
+  font-family: 'Dosis', sans-serif;
+  background-color: var(--page-backgroud-color);
+  letter-spacing: 0.5px;
+}
+
+.page-title {
+  padding: 20px 0 5px;
+  text-align: center;
+}
+.filter-container {
+  padding: 0 20px;
+}
+.all-cards-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-container {
+  display: flex;
+  align-items: center;
+}
+
+.card {
+  width: 350px;
+  margin: 12px;
+  background: white;
+  box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  height: 580px;
+}
+.image-container {
+  width: 350px;
+  height: 230px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.image {
+  width: 100%;
+  height: auto;
+}
+.details-container {
+  padding: 40px;
+}
+.citizen-name {
+  font-size: 20px;
+  letter-spacing: 1.3px;
+  margin-bottom: 15px;
+}
+.details-title {
+  font-weight: 600;
+}
+
+.details {
+  list-style: none;
+  margin-top: 10px;
+}
+
+@media (min-width: 600px) {
+  .all-cards-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
 }
