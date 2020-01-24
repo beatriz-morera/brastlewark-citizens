@@ -46,7 +46,7 @@ main {
   box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.1);
   border-radius: 12px;
   overflow: hidden;
-  height: 580px;
+  height: 600px;
 }
 .image-container {
   width: 350px;
