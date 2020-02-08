@@ -1,50 +1,37 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React from 'react';
+import { HashRouter, Switch, Link, Route, Redirect } from 'react-router-dom';
 
-import Filter from './components/Filter';
-import InfoCard from './components/InfoCard';
+import Home from '../src/Containers/Home';
+import Search from '../src/Containers/Search';
+import Detail from '../src/Containers/Detail';
 
 const App = () => {
-  const [citizens, setCitizens] = useState([]);
-  const [searchCitizen, setSearchCitizen] = useState([]);
-
-  useEffect(() => {
-    fetch(
-      'https://raw.githubusercontent.com/rrafols/mobile_test/master/data.json'
-    )
-      .then(rs => rs.json())
-      .then(data => {
-        setCitizens(data.Brastlewark);
-        setSearchCitizen(data.Brastlewark);
-      });
-  }, []);
-
-  const filterCitizenHandler = useCallback(
-    text => {
-      setSearchCitizen(citizens.filter(citizen => citizen.name.includes(text)));
-    },
-    [citizens]
-  );
-
   return (
-    <main>
-      <h1 className="page-title">Brastlewark Citizens</h1>
-      <Filter onSearch={filterCitizenHandler} />
-      <div className="all-cards-container">
-        {searchCitizen.slice(0, 50).map(citizen => (
-          <InfoCard
-            thumbnail={citizen.thumbnail}
-            name={citizen.name}
-            age={citizen.age}
-            weight={citizen.weight}
-            height={citizen.height}
-            hair_color={citizen.hair_color}
-            professions={citizen.professions.join(', ')}
-            friends={citizen.professions.join(', ')}
-            key={citizen.id}
-          />
-        ))}
-      </div>
-    </main>
+    <HashRouter>
+      <header className="navigation">
+        <Link to="/home">
+          <h1 className="page-title">BRASTLEWARK</h1>
+        </Link>
+        <ul className="navigation-items">
+          <li>
+            <Link to="/home" className="navigation-elements">
+              HOME
+            </Link>
+          </li>
+          <li>
+            <Link to="/search" className="navigation-elements">
+              SEARCH
+            </Link>
+          </li>
+        </ul>
+      </header>
+      <Switch>
+        <Route path="/home" component={Home} exact={true} />
+        <Route path="/search" component={Search} exact={true} />
+        <Route path="/search/:id" component={Detail} />
+        <Route path="/" render={() => <Redirect to="/home" />} exact={true} />
+      </Switch>
+    </HashRouter>
   );
 };
 
