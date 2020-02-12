@@ -1,16 +1,22 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { useData } from '../hooks';
+import { useContextCitizens } from '../hooks';
 import { Avatar, List } from 'antd';
 
 const Detail = () => {
   const { id } = useParams();
-  const { searchCitizen } = useData();
-  const citizen = searchCitizen.find(c => id && c.id === parseInt(id));
-  const friends =
-    citizen && citizen.friends
-      ? citizen.friends.map(name => searchCitizen.find(f => f.name === name))
-      : [];
+  const citizens = useContextCitizens();
+  const citizen = useMemo(
+    () => citizens.find(c => id && c.id === parseInt(id)),
+    [citizens, id]
+  );
+  const friends = useMemo(
+    () =>
+      citizen && citizen.friends
+        ? citizen.friends.map(name => citizens.find(f => f.name === name))
+        : [],
+    [citizen, citizens]
+  );
 
   return (
     <div className="deatail-page-container">

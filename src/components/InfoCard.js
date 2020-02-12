@@ -30,4 +30,4 @@ const InfoCard = ({ thumbnail, name, age, weight, height, id }) => {
   );
 };
 
-export default InfoCard;
+export default React.memo(InfoCard);

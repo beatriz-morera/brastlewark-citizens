@@ -4,12 +4,12 @@ import { Input } from 'antd';
 
 const { Search } = Input;
 
-const Filter = ({ onSearch }) => {
+const Filter = ({ onChange }) => {
   return (
     <div className="filter-container">
       <Search
         placeholder="search citizents by name"
-        onSearch={onSearch}
+        onSearch={onChange}
         size="large"
         enterButton
       />

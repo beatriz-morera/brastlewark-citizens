@@ -1,23 +1,37 @@
-import { useState, useEffect, useCallback } from 'react';
+import {
+  useState,
+  useEffect,
+  useCallback,
+  useContext,
+  createContext
+} from 'react';
 
-export function useData() {
+import { getCitizens } from './services/citizens';
+
+export const CitizensContext = createContext([]);
+
+export function useCitizens() {
   const [citizens, setCitizens] = useState([]);
-  const [searchCitizen, setSearchCitizen] = useState([]);
 
   useEffect(() => {
-    fetch(
-      'https://raw.githubusercontent.com/rrafols/mobile_test/master/data.json'
-    )
-      .then(rs => rs.json())
-      .then(data => {
-        setCitizens(data.Brastlewark);
-        setSearchCitizen(data.Brastlewark);
-      });
+    getCitizens().then(citizens => setCitizens(citizens));
   }, []);
+
+  return citizens;
+}
+
+export const useContextCitizens = () => useContext(CitizensContext);
+
+export function useFilteredCitizens() {
+  const citizens = useContextCitizens();
+
+  const [searchedCitizen, setSearchedCitizen] = useState([]);
+
+  useEffect(() => setSearchedCitizen(citizens), [citizens]);
 
   const filterCitizen = useCallback(
     text => {
-      setSearchCitizen(
+      setSearchedCitizen(
         citizens.filter(citizen =>
           citizen.name.toLowerCase().includes(text.toLowerCase())
         )
@@ -25,5 +39,6 @@ export function useData() {
     },
     [citizens]
   );
-  return { searchCitizen, filterCitizen };
+
+  return [searchedCitizen, filterCitizen];
 }

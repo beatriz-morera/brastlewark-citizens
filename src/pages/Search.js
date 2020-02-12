@@ -2,19 +2,20 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { List, Avatar } from 'antd';
 
-import { useData } from '../hooks';
+import { useFilteredCitizens } from '../hooks';
 
 import Filter from '../components/Filter';
 
 const Search = () => {
-  const { searchCitizen, filterCitizen } = useData();
+  const [searchedCitizen, filterCitizen] = useFilteredCitizens();
   return (
     <div className="search-page-container">
-      <Filter onSearch={filterCitizen} />
+      <Filter onChange={filterCitizen} />
       <section className="list-container">
         <List
+          loading={searchedCitizen.length === 0}
           itemLayout="horizontal"
-          dataSource={searchCitizen.slice(0, 28)}
+          dataSource={searchedCitizen.slice(0, 100)}
           renderItem={citizen => (
             <List.Item>
               <List.Item.Meta

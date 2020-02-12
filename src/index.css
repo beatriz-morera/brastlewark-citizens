@@ -73,17 +73,22 @@ body {
 
 .all-cards-container {
   margin: 70px 5px;
-  display: flex;
-  flex-direction: column;
 }
-.card-container {
+
+.all-cards-container .ant-list-pagination {
   display: flex;
   justify-content: center;
 }
 
+.card-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
 .card {
   width: 300px;
-  margin: 32px 10px;
+  margin: 10px;
   background: white;
   box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.1);
   border-radius: 12px;
@@ -123,7 +128,7 @@ body {
 /* SEARCH */
 
 .list-container {
-  padding: 0px 30px;
+  padding: 0px 30px 30px;
 }
 
 .filter-container,
@@ -190,11 +195,6 @@ body {
   }
   .page-title {
     font-size: 20px;
-  }
-  .all-cards-container {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
   }
   .detail-page-container {
     margin: 50px 100px;
