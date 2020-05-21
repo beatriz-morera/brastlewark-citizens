@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/brastlewark-citizens/static/css/main.229c3414.chunk.css",
-    "main.js": "/brastlewark-citizens/static/js/main.dd16340f.chunk.js",
-    "main.js.map": "/brastlewark-citizens/static/js/main.dd16340f.chunk.js.map",
-    "runtime-main.js": "/brastlewark-citizens/static/js/runtime-main.948c92f4.js",
-    "runtime-main.js.map": "/brastlewark-citizens/static/js/runtime-main.948c92f4.js.map",
-    "static/css/2.ff8bd605.chunk.css": "/brastlewark-citizens/static/css/2.ff8bd605.chunk.css",
-    "static/js/2.a6529f47.chunk.js": "/brastlewark-citizens/static/js/2.a6529f47.chunk.js",
-    "static/js/2.a6529f47.chunk.js.map": "/brastlewark-citizens/static/js/2.a6529f47.chunk.js.map",
+    "main.css": "/brastlewark-citizens/static/css/main.0c853f63.chunk.css",
+    "main.js": "/brastlewark-citizens/static/js/main.944b0f10.chunk.js",
+    "main.js.map": "/brastlewark-citizens/static/js/main.944b0f10.chunk.js.map",
+    "runtime-main.js": "/brastlewark-citizens/static/js/runtime-main.a093887f.js",
+    "runtime-main.js.map": "/brastlewark-citizens/static/js/runtime-main.a093887f.js.map",
+    "static/css/2.81187608.chunk.css": "/brastlewark-citizens/static/css/2.81187608.chunk.css",
+    "static/js/2.68a6ab4b.chunk.js": "/brastlewark-citizens/static/js/2.68a6ab4b.chunk.js",
+    "static/js/2.68a6ab4b.chunk.js.map": "/brastlewark-citizens/static/js/2.68a6ab4b.chunk.js.map",
     "index.html": "/brastlewark-citizens/index.html",
-    "precache-manifest.d8e0d05fb4cb89c689f35753c86c4d1c.js": "/brastlewark-citizens/precache-manifest.d8e0d05fb4cb89c689f35753c86c4d1c.js",
+    "precache-manifest.08fbb4b8386997740741ee8930dbc168.js": "/brastlewark-citizens/precache-manifest.08fbb4b8386997740741ee8930dbc168.js",
     "service-worker.js": "/brastlewark-citizens/service-worker.js",
-    "static/css/2.ff8bd605.chunk.css.map": "/brastlewark-citizens/static/css/2.ff8bd605.chunk.css.map",
-    "static/css/main.229c3414.chunk.css.map": "/brastlewark-citizens/static/css/main.229c3414.chunk.css.map",
-    "static/js/2.a6529f47.chunk.js.LICENSE": "/brastlewark-citizens/static/js/2.a6529f47.chunk.js.LICENSE"
+    "static/css/2.81187608.chunk.css.map": "/brastlewark-citizens/static/css/2.81187608.chunk.css.map",
+    "static/css/main.0c853f63.chunk.css.map": "/brastlewark-citizens/static/css/main.0c853f63.chunk.css.map",
+    "static/js/2.68a6ab4b.chunk.js.LICENSE.txt": "/brastlewark-citizens/static/js/2.68a6ab4b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.948c92f4.js",
-    "static/css/2.ff8bd605.chunk.css",
-    "static/js/2.a6529f47.chunk.js",
-    "static/css/main.229c3414.chunk.css",
-    "static/js/main.dd16340f.chunk.js"
+    "static/js/runtime-main.a093887f.js",
+    "static/css/2.81187608.chunk.css",
+    "static/js/2.68a6ab4b.chunk.js",
+    "static/css/main.0c853f63.chunk.css",
+    "static/js/main.944b0f10.chunk.js"
   ]
 }
