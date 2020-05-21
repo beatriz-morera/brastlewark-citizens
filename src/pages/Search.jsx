@@ -9,19 +9,16 @@ import Filter from '../components/Filter';
 const Search = () => {
   const [searchedCitizen, filterCitizen] = useFilteredCitizens();
   return (
-    <div className="search-page-container">
+    <div className="search-page-container" data-testid="search-page">
       <Filter onChange={filterCitizen} />
       <section className="list-container">
         <List
           loading={searchedCitizen.length === 0}
           itemLayout="horizontal"
           dataSource={searchedCitizen.slice(0, 100)}
-          renderItem={citizen => (
+          renderItem={(citizen) => (
             <List.Item>
-              <List.Item.Meta
-                avatar={<Avatar src={citizen.thumbnail} />}
-                title={citizen.name}
-              />
+              <List.Item.Meta avatar={<Avatar src={citizen.thumbnail} />} title={citizen.name} />
               <div>
                 <Link to={`/search/${citizen.id}`}>View</Link>
               </div>

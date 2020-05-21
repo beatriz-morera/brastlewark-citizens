@@ -1,19 +1,19 @@
 import React, { useMemo } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { useContextCitizens } from '../hooks';
 import { Avatar, List } from 'antd';
+import { useContextCitizens } from '../hooks';
 
 const Detail = () => {
   const { id } = useParams();
   const citizens = useContextCitizens();
-  const citizen = useMemo(
-    () => citizens.find(c => id && c.id === parseInt(id)),
-    [citizens, id]
-  );
+  const citizen = useMemo(() => citizens.find((c) => id && c.id === parseInt(id, 10)), [
+    citizens,
+    id,
+  ]);
   const friends = useMemo(
     () =>
       citizen && citizen.friends
-        ? citizen.friends.map(name => citizens.find(f => f.name === name))
+        ? citizen.friends.map((name) => citizens.find((f) => f.name === name))
         : [],
     [citizen, citizens]
   );
@@ -23,19 +23,22 @@ const Detail = () => {
       {citizen && (
         <section className="detail-page-container">
           <div>
-            <Avatar size={250} src={citizen.thumbnail} />
+            <Avatar size={250} src={citizen.thumbnail} data-testid="avatar" />
             <div className="detail-page-basic-info-container">
-              <h3 className="citizen-name">{citizen.name}</h3>
+              <h3 className="citizen-name" data-testid="name">
+                {citizen.name}
+              </h3>
               <ul>
                 <li className="detail-page-info">
-                  <span className="details-title">age: </span> {citizen.age}
+                  <span className="details-title">age: </span>
+                  {citizen.age}
                 </li>
                 <li className="detail-page-info">
-                  <span className="details-title">weight: </span>{' '}
+                  <span className="details-title">weight: </span>
                   {citizen.weight}
                 </li>
                 <li className="detail-page-info">
-                  <span className="details-title">height: </span>{' '}
+                  <span className="details-title">height: </span>
                   {citizen.height}
                 </li>
                 <li className="detail-page-info">
@@ -47,18 +50,16 @@ const Detail = () => {
           </div>
           <div className="detail-page-extra-info-container">
             <div className="detail-page-extra-info">
-              <h3 style={{ margin: '16px 0', fontWeight: '600' }}>
-                Professions
-              </h3>
+              <h3 style={{ margin: '16px 0', fontWeight: '600' }}>Professions</h3>
               {citizen.professions.length ? (
                 <List
                   size="small"
                   itemLayout="horizontal"
                   dataSource={citizen.professions}
-                  renderItem={p => <List.Item>{p}</List.Item>}
+                  renderItem={(p) => <List.Item>{p}</List.Item>}
                 />
               ) : (
-                <p style={{ color: 'red' }}>There are no professions to show</p>
+                <p style={{ color: 'red' }}>No professions to show.</p>
               )}
             </div>
             <div className="detail-page-extra-info">
@@ -66,13 +67,13 @@ const Detail = () => {
               <div className="friends-info-container-container">
                 <ul className="friends-info-container">
                   {citizen.friends.length ? (
-                    friends.map(friend => (
+                    friends.map((friend) => (
                       <li className="friend-info" key={friend.id}>
                         <Avatar size={70} src={friend.thumbnail} />
                         <Link
                           to={`/search/${friend.id}`}
                           style={{
-                            marginTop: '15px'
+                            marginTop: '15px',
                           }}
                         >
                           {friend.name}
@@ -80,9 +81,7 @@ const Detail = () => {
                       </li>
                     ))
                   ) : (
-                    <p style={{ color: 'red' }}>
-                      This citizen does not have any friends
-                    </p>
+                    <p style={{ color: 'red' }}>No friends to show.</p>
                   )}
                 </ul>
               </div>

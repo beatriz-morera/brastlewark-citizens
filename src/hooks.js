@@ -1,10 +1,4 @@
-import {
-  useState,
-  useEffect,
-  useCallback,
-  useContext,
-  createContext
-} from 'react';
+import { useState, useEffect, useCallback, useContext, createContext } from 'react';
 
 import { getCitizens } from './services/citizens';
 
@@ -14,7 +8,7 @@ export function useCitizens() {
   const [citizens, setCitizens] = useState([]);
 
   useEffect(() => {
-    getCitizens().then(citizens => setCitizens(citizens));
+    getCitizens().then((data) => setCitizens(data));
   }, []);
 
   return citizens;
@@ -30,12 +24,15 @@ export function useFilteredCitizens() {
   useEffect(() => setSearchedCitizen(citizens), [citizens]);
 
   const filterCitizen = useCallback(
-    text => {
-      setSearchedCitizen(
-        citizens.filter(citizen =>
-          citizen.name.toLowerCase().includes(text.toLowerCase())
-        )
-      );
+    (text) => {
+      const name = text.trim();
+      if (name !== '') {
+        setSearchedCitizen(
+          citizens.filter((citizen) => citizen.name.toLowerCase().includes(name.toLowerCase()))
+        );
+      } else {
+        setSearchedCitizen(citizens);
+      }
     },
     [citizens]
   );

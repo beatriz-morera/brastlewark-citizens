@@ -1,0 +1,218 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`search should render 1`] = `
+<DocumentFragment>
+  <div
+    class="search-page-container"
+    data-testid="search-page"
+  >
+    <div
+      class="filter-container"
+    >
+      <span
+        class="ant-input-search ant-input-search-enter-button ant-input-search-large ant-input-group-wrapper ant-input-group-wrapper-lg"
+      >
+        <span
+          class="ant-input-wrapper ant-input-group"
+        >
+          <input
+            class="ant-input ant-input-lg"
+            data-testid="searchbar"
+            placeholder="search citizents by name"
+            type="text"
+            value=""
+          />
+          <span
+            class="ant-input-group-addon"
+          >
+            <button
+              class="ant-btn ant-input-search-button ant-btn-primary ant-btn-lg"
+              type="button"
+            >
+              <i
+                aria-label="icon: search"
+                class="anticon anticon-search"
+              >
+                <svg
+                  aria-hidden="true"
+                  class=""
+                  data-icon="search"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  viewBox="64 64 896 896"
+                  width="1em"
+                >
+                  <path
+                    d="M909.6 854.5L649.9 594.8C690.2 542.7 712 479 712 412c0-80.2-31.3-155.4-87.9-212.1-56.6-56.7-132-87.9-212.1-87.9s-155.5 31.3-212.1 87.9C143.2 256.5 112 331.8 112 412c0 80.1 31.3 155.5 87.9 212.1C256.5 680.8 331.8 712 412 712c67 0 130.6-21.8 182.7-62l259.7 259.6a8.2 8.2 0 0 0 11.6 0l43.6-43.5a8.2 8.2 0 0 0 0-11.6zM570.4 570.4C528 612.7 471.8 636 412 636s-116-23.3-158.4-65.6C211.3 528 188 471.8 188 412s23.3-116.1 65.6-158.4C296 211.3 352.2 188 412 188s116.1 23.2 158.4 65.6S636 352.2 636 412s-23.3 116.1-65.6 158.4z"
+                  />
+                </svg>
+              </i>
+            </button>
+          </span>
+        </span>
+      </span>
+    </div>
+    <section
+      class="list-container"
+    >
+      <div
+        class="ant-list ant-list-split"
+      >
+        <div
+          class="ant-spin-nested-loading"
+        >
+          <div
+            class="ant-spin-container"
+          >
+            <ul
+              class="ant-list-items"
+            >
+              <li
+                class="ant-list-item"
+              >
+                <div
+                  class="ant-list-item-meta"
+                >
+                  <div
+                    class="ant-list-item-meta-avatar"
+                  >
+                    <span
+                      class="ant-avatar ant-avatar-circle ant-avatar-image"
+                    >
+                      <img
+                        src="http://www.publicdomainpictures.net/pictures/10000/nahled/thinking-monkey-11282237747K8xB.jpg"
+                      />
+                    </span>
+                  </div>
+                  <div
+                    class="ant-list-item-meta-content"
+                  >
+                    <h4
+                      class="ant-list-item-meta-title"
+                    >
+                      Tobus Quickwhistle
+                    </h4>
+                  </div>
+                </div>
+                <div>
+                  <a
+                    href="#/search/0"
+                  >
+                    View
+                  </a>
+                </div>
+              </li>
+              <li
+                class="ant-list-item"
+              >
+                <div
+                  class="ant-list-item-meta"
+                >
+                  <div
+                    class="ant-list-item-meta-avatar"
+                  >
+                    <span
+                      class="ant-avatar ant-avatar-circle ant-avatar-image"
+                    >
+                      <img
+                        src="http://www.publicdomainpictures.net/pictures/120000/nahled/white-hen.jpg"
+                      />
+                    </span>
+                  </div>
+                  <div
+                    class="ant-list-item-meta-content"
+                  >
+                    <h4
+                      class="ant-list-item-meta-title"
+                    >
+                      Fizkin Voidbuster
+                    </h4>
+                  </div>
+                </div>
+                <div>
+                  <a
+                    href="#/search/1"
+                  >
+                    View
+                  </a>
+                </div>
+              </li>
+              <li
+                class="ant-list-item"
+              >
+                <div
+                  class="ant-list-item-meta"
+                >
+                  <div
+                    class="ant-list-item-meta-avatar"
+                  >
+                    <span
+                      class="ant-avatar ant-avatar-circle ant-avatar-image"
+                    >
+                      <img
+                        src="http://www.publicdomainpictures.net/pictures/30000/nahled/maple-leaves-background.jpg"
+                      />
+                    </span>
+                  </div>
+                  <div
+                    class="ant-list-item-meta-content"
+                  >
+                    <h4
+                      class="ant-list-item-meta-title"
+                    >
+                      Malbin Chromerocket
+                    </h4>
+                  </div>
+                </div>
+                <div>
+                  <a
+                    href="#/search/2"
+                  >
+                    View
+                  </a>
+                </div>
+              </li>
+              <li
+                class="ant-list-item"
+              >
+                <div
+                  class="ant-list-item-meta"
+                >
+                  <div
+                    class="ant-list-item-meta-avatar"
+                  >
+                    <span
+                      class="ant-avatar ant-avatar-circle ant-avatar-image"
+                    >
+                      <img
+                        src="http://www.publicdomainpictures.net/pictures/10000/nahled/1-1275919724d1Oh.jpg"
+                      />
+                    </span>
+                  </div>
+                  <div
+                    class="ant-list-item-meta-content"
+                  >
+                    <h4
+                      class="ant-list-item-meta-title"
+                    >
+                      Midwig Gyroslicer
+                    </h4>
+                  </div>
+                </div>
+                <div>
+                  <a
+                    href="#/search/3"
+                  >
+                    View
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</DocumentFragment>
+`;
